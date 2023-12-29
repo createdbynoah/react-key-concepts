@@ -5,6 +5,10 @@ import TabButton from './components/TabButton/TabButton';
 import { CORE_CONCEPTS } from './data.js';
 
 function App() {
+  function handleClick(item) {
+    console.log(`You clicked on the ${item} tab!`);
+  }
+
   return (
     <div>
       <Header />
@@ -24,10 +28,10 @@ function App() {
         </section>
         <section id="examples">
           <menu>
-            <TabButton>Components</TabButton>
-            <TabButton>JSX</TabButton>
-            <TabButton>Props</TabButton>
-            <TabButton>State</TabButton>
+            <TabButton onClick={handleClick}>Components</TabButton>
+            <TabButton onClick={handleClick}>JSX</TabButton>
+            <TabButton onClick={handleClick}>Props</TabButton>
+            <TabButton onClick={handleClick}>State</TabButton>
           </menu>
         </section>
       </main>
