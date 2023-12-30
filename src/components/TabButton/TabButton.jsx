@@ -1,6 +1,6 @@
 export default function TabButton({ children, onClick }) {
   function handleClick() {
-    onClick(children);
+    onClick(children.toLowerCase());
   }
 
   return (
